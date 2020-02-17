@@ -126,6 +126,7 @@ def draw(x, y, Obj, Type, height, width, Images, AnimationStage, Count):
         else:
             pygame.draw.rect(gameDisplay, (50, 205, 50), (x, y, (640 / width), (640 / height)), 1)
 
+
 # Makes the board that the user will see
 # generates a random amount of resources that the user can exploit
 #Generates a board using a height and a width

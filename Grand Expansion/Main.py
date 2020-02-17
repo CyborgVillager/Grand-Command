@@ -295,7 +295,8 @@ def boardUpSize(board,height,width):
 
 #The main part of the game
 def game_loop(height,width,prestige,LoadSave):
-    global AscendCount, MinerBought, ResourceCount, MaterialProduction, Cooldown, UnUpgradable, UpgradeInfo, MaterialsEarned, AnimationStage, Count, Achviements, MusicPaused, Images, Mult, MapLevel, PrestigeCount
+    global AscendCount, MinerBought, ResourceCount, MaterialProduction, Cooldown, UnUpgradable, UpgradeInfo,\
+        MaterialsEarned, AnimationStage, Count, Achviements, MusicPaused, Images, Mult, MapLevel, PrestigeCount
 
     #Declaring a ton of variables
     game_run = True

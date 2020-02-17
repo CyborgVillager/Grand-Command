@@ -37,7 +37,7 @@ pygame.mixer.music.play(-1)
 global MusicPaused
 MusicPaused = False
 
-#Shorten is a function that takes a number and shortens it while still keeping the value because of the use of letters
+#Shorten
 
 
 #Generates a board using a height and a width
@@ -58,15 +58,144 @@ from tile_information import *
 
 
 
-# Generates a board using a height and a width
+
+
 
 
 
 # Main Info for GC
+def game_loop(height,width,prestige,LoadSave):
+    global AscendCount, MinerBought, ResourceCount, MaterialProduction, Cooldown, UnUpgradable, UpgradeInfo,\
+        MaterialsEarned, AnimationStage, Count, Achviements, MusicPaused, Images, Mult, MapLevel, PrestigeCount
 
 
     # Declaring a ton of variables
+    game_run = True
+    board = gen_Board([[0] * height for _ in range(width)], height, width)
+    CurSelection = [-1, -1]
+    ResourceCount = {"Wood": 10, "Stones": 0, "Food": 0, "Metal": 0, "Electricity": 0, "Prestige": prestige,
+                     "Mandorium": 0}
+    MaterialProduction = {"Wood": 0, "Stones": 0, "Food": 0, "Metal": 0, "Electricity": 0, "Prestige": 0,
+                          "Mandorium": 0}
+    MaterialsEarned = {"Wood": 0, "Stones": 0, "Food": 0, "Metal": 0, "Electricity": 0, "Prestige": prestige,
+                       "Mandorium": 0}
+    Cooldown = time.process_time()
+    UnUpgradable = ["Water", "Grass", "Quarry Lv3", "Forest Lv3", "Water Fish", "Water Dam"]
+    UpgradeInfo = {"Map Upgrades": [], "Forest Lv1": ["10 wood", "0 wood", "1 wood"],
+                   "Quarry Lv1": ["15 wood", "0 stones", "1 stones"], "Forest Lv2": ["40 wood", "1 wood", "5 wood"],
+                   "Quarry Lv2": ["45 wood", "20 stones", "1 stones", "5 stones"]}
+    Achievments = [
+        {"Name": "Beginner", "Description": "You gathered 100 wood", "Reward": "Unlocked cities", "wood": 100,
+         "Finished": False, "Show Cooldown": 0}
+        , {"Name": "Food Man", "Description": "You gathered 50 food", "Reward": "Unlocked Factories", "wood": 300,
+           "stones": 100, "food": 50, "Finished": False, "Show Cooldown": 0}
+        , {"Name": "Heavy Metal", "Description": "You made 100 metal", "Reward": "Unlocked Electricity", "metal": 100,
+           "Finished": False, "Show Cooldown": 0}
+        , {"Name": "Shocking", "Description": "You produced 100 Electricity", "Reward": "Unlocked Electric Upgrades",
+           "Electricity": 100, "Finished": False, "Show Cooldown": 0}
+        , {"Name": "Fast Materials", "Description": "You got a Lvl4 Upgrade", "Reward": "Unlocked Upgraded Factories",
+           "Finished": False, "Show Cooldown": 0}
+        , {"Name": "Stockpile", "Description": "Have 200 food at any time", "Reward": "Unlocked Fishermen",
+           "Finished": False, "Show Cooldown": 0}
+        ,
+        {"Name": "Restarter", "Description": "You rebirthed 3 times", "Reward": "Unlocked Mandorium", "Finished": False,
+         "Show Cooldown": 0}]
+    Images = []
+    Images = load_images("Images", height, width)
+    ConfirmMessage = ""
+    Confirming = False
+    PreviousPos = [0, 0]
+    MenuClicking = False
+    AnimationStage = {"Water": [1, 0.5], "Dam": [1, 0.5]}
+    Count = {"Water": 0, "Dam": 0}
+    StartTime = time.process_time()
+    hour = 0
+    seconds = 0
+    minutes = 0
+    TimeStart = 0
+    SaveMesses = 0
+    Secret = False
+    SaveCooldown = time.process_time() + 30
+    cost = [5, 15]
+    cost2 = [10]
+    for i in range(MapLevel + 1):
+        cost2.append(cost2[len(cost2) - 1] * 10)
+    HighMult = 0
+    for item in Mult:
+        if Mult[item] >= HighMult:
+            HighMult = Mult[item]
+    for i in range(HighMult):
+        cost.append(cost[len(cost) - 1] * 3)
+    Saving = 0
 
+    if LoadSave == True:
+        SaveFile = open("Save File/SaveFile.txt", "r")
+        ask = SaveFile.readline()
+        DataList = []
+        if ask.count("#") >= 90:
+            count = 0
+            for i in range(ask.count("#")):
+                DataBit = ""
+                FindBit = True
+                while FindBit == True:
+                    if ask[count] != "#":
+                        DataBit += ask[count]
+                    else:
+                        FindBit = False
+                    count += 1
+                DataList.append(DataBit)
+
+            Count = 0
+            if DataList[Count] == "Beta1.6":
+                Count += 1
+                ItemChecker = [ResourceCount, MaterialProduction, MaterialsEarned]
+                for Item in ItemChecker:
+                    for item in Item:
+                        Item[item] = int(DataList[Count])
+                        Count += 1
+
+                for item in Mult:
+                    Mult[item] = int(DataList[Count])
+                    Count += 1
+
+                for quest in Achievments:
+                    if Achievments.index(quest) != 6:
+                        quest["Finished"] = DataList[Count]
+                        if quest["Finished"] == "True":
+                            AchievmentRewards(Achievments.index(quest))
+                            quest["Finished"] = True
+                        else:
+                            quest["Finished"] = False
+                        quest["Show Cooldown"] = int(DataList[Count + 1])
+                    Count += 2
+
+                height = int(DataList[Count])
+                width = int(DataList[Count + 1])
+                Count += 2
+                Images = load_images("Images", height, width)
+                board = [[0] * height for _ in range(width)]
+
+                PrestigeCount = int(DataList[Count])
+                AscendCount = int(DataList[Count + 1])
+                MinerBought = DataList[Count + 2]
+                MusicPaused = DataList[Count + 3]
+                if MusicPaused == "True":
+                    pygame.mixer.music.pause()
+                    MusicPaused = True
+                else:
+                    MusicPaused = False
+
+                Count += 4
+
+                Tiles = ["Grass", "City", "Factory", "Factory Su", "Factory So", "Solar Power", "Super Factory",
+                         "Forest Lv1", "Forest Lv2", "Forest Lv3"
+                    , "Forest Lv4", "Quarry Lv1", "Quarry Lv2", "Quarry Lv3", "Quarry Lv4", "Water", "Water Dam",
+                         "Water Fish", "Fisherman", "Dam"
+                    , "CityFar", "CityFac", "Farm"]
+                for j in range(height):
+                    for i in range(width):
+                        board[j][i] = Tiles[int(DataList[Count])]
+                        Count += 1
 
     # Saves data(Useful for Prestiges)
 

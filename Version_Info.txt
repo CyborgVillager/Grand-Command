@@ -25,6 +25,9 @@ v2 Added Updated Info: Added Updated info for Grand Command, will be fixing Gran
                         working on this project.
 
 
---v3 Redfining: studying the code and redifying the aspects, and commenting to be easier to read for future updates
+v3 Redfining: studying the code and redifying the aspects, and commenting to be easier to read for future updates
+
+--v4 Re-test-clean: will be testing the code/ cleaning it up, then will work on GC and start a 'new game' to test the
+                        results.
 
 
