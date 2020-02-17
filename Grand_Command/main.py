@@ -10,9 +10,20 @@ from gc_fonts import *
 
 
 #Loading the images
-
+def load_images(path_to_directory,height,width):
+    images = {}
+    for dirpath, dirnames, filenames in os.walk(path_to_directory):
+        for name in filenames:
+            if name.endswith('.png'):
+                key = name[:-4]
+                img = pygame.image.load(os.path.join(dirpath, name)).convert()
+                img = pygame.transform.scale(img,(int(640/width),int(640/height)))
+                images[key] = img
+    return images
 
 #Multipliers for Prestige
+global Mult
+Mult = {"Wood": 10, "Stones": 10, "Food": 10, "Metal": 10, "Electricity": 10,"Prestige": 1, "Mandorium": 1}
 
 
 #Map Level
@@ -34,7 +45,7 @@ MusicPaused = False
 
 
 # Checks for all the achievments
-
+from achievment_check import *
 
 
 
@@ -44,7 +55,6 @@ MusicPaused = False
 # Tile Information
 from tile_information import *
 
-    # Draws the green selection thing
 
 
 

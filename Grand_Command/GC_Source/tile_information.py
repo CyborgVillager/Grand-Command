@@ -53,7 +53,7 @@ def draw(x, y, Obj, Type, height, width, Images, AnimationStage, Count):
                 else:
                     AnimationStage["FishingBoat"][1] -= 2 / Count["FishingBoat"]
 
-    # Tile Texture #
+        # Tile Texture #
 
         # Stone Gather
         if Type == "Quarry Lv1":
@@ -116,3 +116,59 @@ def draw(x, y, Obj, Type, height, width, Images, AnimationStage, Count):
 
         # Tile Border
         pygame.draw.rect(gameDisplay, (50, 50, 50), (x, y, (640 / width), (640 / height)), 1)
+
+    # User button click which lights up the selected obj
+    # they have choosen on the generated board
+    if Obj == "Selection":
+        if int(5 / (int(height / 2) - 3)) != 0:
+            pygame.draw.rect(gameDisplay, (50, 205, 50), (x, y, (640 / width), (640 / height)),
+                             int(5 / (int(height / 2) - 3)))
+        else:
+            pygame.draw.rect(gameDisplay, (50, 205, 50), (x, y, (640 / width), (640 / height)), 1)
+
+# Makes the board that the user will see
+# generates a random amount of resources that the user can exploit
+#Generates a board using a height and a width
+def gen_Board(board,height,width):
+    for j in range(height):
+        for i in range(width):
+            percent = random.randint(1,100)
+            if percent <= 50:
+                board[j][i] = "Grass"
+            else:
+                if percent <= 60:
+                    board[j][i] = "Water"
+                elif percent <= 75:
+                    board[j][i] = "Forest Lv1"
+                else:
+                    board[j][i] = "Quarry Lv1"
+    return board
+
+def boardUpSize(board,height,width):
+    for TileRow in board:
+        for i in range(2):
+            percent = random.randint(1,100)
+            if percent <= 50:
+                TileRow.append("Grass")
+            else:
+                if percent <= 60:
+                    TileRow.append("Water")
+                elif percent <= 75:
+                    TileRow.append("Forest Lv1")
+                else:
+                    TileRow.append("Quarry Lv1")
+    for i in range(2):
+        boardline = []
+        for i in range(width):
+            percent = random.randint(1,100)
+            if percent <= 50:
+                boardline.append("Grass")
+            else:
+                if percent <= 60:
+                    boardline.append("Water")
+                elif percent <= 75:
+                    boardline.append("Forest Lv1")
+                else:
+                    boardline.append("Quarry Lv1")
+        board.append(boardline)
+    return board

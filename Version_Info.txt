@@ -21,7 +21,10 @@ v1 Respo Created: Respo created, will update it once I'm done with Grand-Expansi
 			interaction with A.I/with other features that Ill get into once this respo becomes active again.
 
 
---v2 Added Updated Info: Added Updated info for Grand Command, will be fixing Grand Expansion a bit then will start
+v2 Added Updated Info: Added Updated info for Grand Command, will be fixing Grand Expansion a bit then will start
                         working on this project.
+
+
+--v3 Redfining: studying the code and redifying the aspects, and commenting to be easier to read for future updates
 
 
