@@ -1,15 +1,5 @@
 from gc_game_data import *
 
-# Initialize the game engine
-pygame.init()
-
-
-
-
-clock = pygame.time.Clock()
-
-
-
 
 # Making the window
 gameDisplay = pygame.display.set_mode((DisplayWidth, DisplayHeight))
