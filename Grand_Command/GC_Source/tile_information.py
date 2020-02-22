@@ -129,7 +129,7 @@ def draw(x, y, Obj, Type, height, width, Images, AnimationStage, Count):
 
 # Makes the board that the user will see
 # generates a random amount of resources that the user can exploit
-#Generates a board using a height and a width
+# Generates a board using a height and a width
 def gen_Board(board,height,width):
     for j in range(height):
         for i in range(width):

@@ -101,6 +101,7 @@ def HomeScreen(pygame, gameDisplay, Fonts, clock, MusicPaused):
         for j in range(height):
             for i in range(width):
                 main.draw(i * 80 + x, j * 80 + y, "Tile", MenuBoard[j][i], 8, 8, Images, AnimationStage, Count)
+                main.draw(i * 80 + x, j * 80 + y, "Tile", MenuBoard[j][i], 8, 8, Images, AnimationStage, Count)
                 main.draw(i * 80 + x + 1600, j * 80 + y, "Tile", MenuBoard[j][i], 8, 8, Images, AnimationStage, Count)
                 main.draw(i * 80 + x, j * 80 + y + 1600, "Tile", MenuBoard[j][i], 8, 8, Images, AnimationStage, Count)
                 main.draw(i * 80 + x + 1600, j * 80 + y + 1600, "Tile", MenuBoard[j][i], 8, 8, Images, AnimationStage,
@@ -125,8 +126,6 @@ def HomeScreen(pygame, gameDisplay, Fonts, clock, MusicPaused):
                     main.game_loop(8, 8, 0, False)
                 if 825 <= pos[0] <= 925 and 800 <= pos[1] <= 900 and screen == "Main":
                     screen = "Options"
-                if 625 <= pos[0] <= 925 and 500 <= pos[1] <= 900 and screen == "Main":
-                    screen = "New Game"
                 if 775 <= pos[0] <= 975 and pos[1] >= 675 and pos[1] <= 775 and screen == "Options":
                     screen = "Main"
                 if 175 <= pos[0] <= 375 and 600 <= pos[1] <= 700 and screen == "Main":
@@ -145,15 +144,13 @@ def HomeScreen(pygame, gameDisplay, Fonts, clock, MusicPaused):
             text_surface, rect = Fonts[2].render("Grand Command", (242, 43, 35))
             gameDisplay.blit(text_surface, (220, 50))
             # mouse hover & un-hover location
-            if 600 <= pos[0] <= 830 and 620 <= pos[1] <= 840:
-                # box location not-hover
-                pygame.draw.rect(gameDisplay, (150, 0, 0), (580, 800, 200, 100), 0)
+            if pos[0] >= 400 and pos[0] <= 600 and pos[1] >= 600 and pos[1] <= 700:
+                pygame.draw.rect(gameDisplay, (150, 0, 0), (400, 600, 200, 100), 0)
             else:
-                # box location on-hover
-                pygame.draw.rect(gameDisplay, (255, 0, 0), (580, 800, 200, 100), 0)
+                pygame.draw.rect(gameDisplay, (255, 0, 0), (400, 600, 200, 100), 0)
 
-            text_surface, rect = Fonts[1].render("New Game", (0, 0, 0))
-            gameDisplay.blit(text_surface, (600, 830))
+            text_surface, rect = Fonts[1].render(("New Game"), (0, 0, 0))
+            gameDisplay.blit(text_surface, (420, 630))
 
             # mouse clickable to options -> menu for mute sound atm
             if 825 <= pos[0] <= 925 and 850 <= pos[1] <= 900:

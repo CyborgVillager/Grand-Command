@@ -27,7 +27,11 @@ v2 Added Updated Info: Added Updated info for Grand Command, will be fixing Gran
 
 v3 Redfining: studying the code and redifying the aspects, and commenting to be easier to read for future updates
 
---v4 Re-test-clean: will be testing the code/ cleaning it up, then will work on GC and start a 'new game' to test the
+v4 Re-test-clean: will be testing the code/ cleaning it up, then will work on GC and start a 'new game' to test the
                         results.
+
+--v5 Modi Start: Game can be 'started' but will crash. Will work on fixing this issue and allowing building materials, before putting
+			in the military elements onto it.
+
 
 
