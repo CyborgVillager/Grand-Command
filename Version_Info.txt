@@ -30,8 +30,11 @@ v3 Redfining: studying the code and redifying the aspects, and commenting to be 
 v4 Re-test-clean: will be testing the code/ cleaning it up, then will work on GC and start a 'new game' to test the
                         results.
 
---v5 Modi Start: Game can be 'started' but will crash. Will work on fixing this issue and allowing building materials, before putting
+v5 Modi Start: Game can be 'started' but will crash. Will work on fixing this issue and allowing building materials, before putting
 			in the military elements onto it.
+
+--v6 Temp Jeep: Added temp military jeep to the military vechs. A blueprint template is availb to be modif as well. Will be working on
+			improving the design of the jeep as time goes on. Making rounded edges for a 'car' requires more work.
 
 
 
