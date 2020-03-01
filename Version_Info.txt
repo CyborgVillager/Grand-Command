@@ -80,4 +80,8 @@ v13 Multiply Resources: made gathering resources a bit faster just by X global i
                             once they are built. Modified saved data, will test out different ways, currently in the testing
                             phase for saving/expirmenting with the save feature.
  ----------------------------    ----------------------------   ------------------------- ------------------------------
- -wor:v14 Pause: will continue to work on this proj, putting on halt for the time being. Will begin operation @ 3/2/20
+ wor:v14 Pause: will continue to work on this proj, putting on halt for the time being. Will begin operation @ 3/2/20
+
+                --v14.5 Edit: consolidation will take progress on 3/2/20 as well, will fix the img issue, then build up on
+                                making the code more concise.
+
