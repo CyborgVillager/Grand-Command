@@ -33,8 +33,25 @@ v4 Re-test-clean: will be testing the code/ cleaning it up, then will work on GC
 v5 Modi Start: Game can be 'started' but will crash. Will work on fixing this issue and allowing building materials, before putting
 			in the military elements onto it.
 
---v6 Temp Jeep: Added temp military jeep to the military vechs. A blueprint template is availb to be modif as well. Will be working on
+v6 Temp Jeep: Added temp military jeep to the military vechs. A blueprint template is availb to be modif as well. Will be working on
 			improving the design of the jeep as time goes on. Making rounded edges for a 'car' requires more work.
+
+--v7 Begin Op: will begin to work on Grand Command & Grand Expansion shortly, have some ideas on making GC playable, and
+                including military tacti for handling hostile,riots,etc triggers or events that are caused by an npc/ai.
+
+                Other plans to include
+                *Morale if a unit depending on the unit spec, will have a morale data, if that data goes to a certain # they
+                  will flee the battle or action they are taking. In some cases you will lose that unit or become 'captured'
+                  and possib killed or 'im-prisoned' to the hostile forces.
+
+                 *Riot units will deal with riots/civlian issues, if the damage from riots go to a certain point the
+                 city/town will stop producing resources and take in more resources from your civ. If this continues the city
+                 might be over-taken by riot units and be 'controlled' by gangs
+
+                 *Other updates to military expansion, will include scientific and soon diplo expansions as well.
+                 units will be added according to the updates that are taking place
+
+                 -Main objective get the game to start, and make farm->town->city upgrade avialb.
 
 
 
