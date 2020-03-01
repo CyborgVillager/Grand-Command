@@ -179,7 +179,7 @@ def game_loop(height, width, prestige, LoadSave):
                 DataList.append(DataBit)
 
             Count = 0
-            if DataList[Count] == "Beta1.6":
+            if DataList[Count] == "Beta2.5":
                 Count += 1
                 ItemChecker = [ResourceCount, MaterialProduction, MaterialsEarned]
                 for Item in ItemChecker:
@@ -220,7 +220,7 @@ def game_loop(height, width, prestige, LoadSave):
 
                 Count += 4
 
-                Tiles = ["Grass", "City", "Factory", "Factory Su", "Factory So", "Solar Power", "Super Factory",
+                Tiles = ["Grass", "City_00", "Factory", "Factory Su", "Factory So", "Solar Power", "Super Factory",
                          "Forest Lv1", "Forest Lv2", "Forest Lv3"
                     , "Forest Lv4", "Quarry Lv1", "Quarry Lv2", "Quarry Lv3", "Quarry Lv4", "Water", "Water Dam",
                          "Water Fish", "Fisherman", "Dam"
@@ -254,7 +254,7 @@ def game_loop(height, width, prestige, LoadSave):
     Data += str(MinerBought) + "#"
     Data += str(MusicPaused) + "#"
 
-    Tiles = ["Grass", "City", "Factory", "Factory Su", "Factory So", "Solar Power", "Super Factory", "Forest Lv1",
+    Tiles = ["Grass", "City_00", "Factory", "Factory Su", "Factory So", "Solar Power", "Super Factory", "Forest Lv1",
              "Forest Lv2", "Forest Lv3"
         , "Forest Lv4", "Quarry Lv1", "Quarry Lv2", "Quarry Lv3", "Quarry Lv4", "Water", "Water Dam", "Water Fish",
              "Fisherman", "Dam"

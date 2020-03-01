@@ -72,7 +72,11 @@ v11 Consolidate PT 05: modified GC_Source to have a main gc_source that will hol
                             in a organized format, will continue to consolidate the code for better readability & ease of
                             modifications.
 
---v12 Modified gc_source: updated the source to have ImportError, just in case any of the files are unable to import onto
+v12 Modified gc_source: updated the source to have ImportError, just in case any of the files are unable to import onto
                             the main gc_source.py
 
+--v13 Multiply Resources: made gathering resources a bit faster just by X global info @ gc_global_info.py ->
+                            Multipliers for Prestige. Will work on allowing the city, dam, and other images to show up
+                            once they are built. Modified saved data, will test out different ways, currently in the testing
+                            phase for saving/expirmenting with the save feature.
 

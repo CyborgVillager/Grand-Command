@@ -30,7 +30,10 @@ try:
 except ImportError:
     print('Unable to import gc_loadimg')
 
-
+try:
+    from gc_shorten import *
+except ImportError:
+    print('Unable to import gc_shorten')
 
 # Contains Prestige Count, Multipliers for Prestige, Map Level, & Background Music
 try:

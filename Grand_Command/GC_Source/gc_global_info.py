@@ -9,7 +9,7 @@ AscendCount = 0
 
 # Multipliers for Prestige
 global Mult
-Mult = {"Wood": 10, "Stones": 10, "Food": 10, "Metal": 10, "Electricity": 10, "Prestige": 1, "Mandorium": 1}
+Mult = {"Wood": 90, "Stones": 90, "Food": 90, "Metal": 90, "Electricity": 90, "Prestige": 1, "Mandorium": 1}
 
 # Map Level
 global MapLevel
