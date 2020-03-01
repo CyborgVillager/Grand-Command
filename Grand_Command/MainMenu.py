@@ -116,7 +116,7 @@ def HomeScreen(pygame, gameDisplay, Fonts, clock, MusicPaused):
                     
         #Shows Main screen text and buttons
         if screen == "Main":
-            text_surface, rect = Fonts[2].render(("Grand Expansion"), (0, 0, 0))
+            text_surface, rect = Fonts[2].render(("Grand Command v2"), (0, 0, 0))
             gameDisplay.blit(text_surface, (85, 50))
 
 

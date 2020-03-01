@@ -54,8 +54,12 @@ v7 Begin Op: will begin to work on Grand Command & Grand Expansion shortly, have
                  -Main objective get the game to start, and make farm->town->city upgrade avialb.
  ----------------------------    ----------------------------   ------------------------- ------------------------------
  
---v8 Game Start: game is able to be open @ Grand_Command folder. Grand_Comand00 will be the testing grounds before putting
+v8 Game Start: game is able to be open @ Grand_Command folder. Grand_Comand00 will be the testing grounds before putting
                 them onto Grand_Command for the time being. Game can be start, now will be cleaning up/tidying up the code
                 before implementing the updates as stated on v7 -> farm->town->city, other civ updates then the military,
                 scientific,diplo aspects of it.
+
+--v9 Wiki Implement: will include wiki implement as a tut, to help aid in the modification of the game if you wish to include
+                    your addons to it, as well on how to start the game, place to comment, etc.
+
 
