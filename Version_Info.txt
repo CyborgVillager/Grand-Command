@@ -36,7 +36,7 @@ v5 Modi Start: Game can be 'started' but will crash. Will work on fixing this is
 v6 Temp Jeep: Added temp military jeep to the military vechs. A blueprint template is availb to be modif as well. Will be working on
 			improving the design of the jeep as time goes on. Making rounded edges for a 'car' requires more work.
 
---v7 Begin Op: will begin to work on Grand Command & Grand Expansion shortly, have some ideas on making GC playable, and
+v7 Begin Op: will begin to work on Grand Command & Grand Expansion shortly, have some ideas on making GC playable, and
                 including military tacti for handling hostile,riots,etc triggers or events that are caused by an npc/ai.
 
                 Other plans to include
@@ -52,6 +52,10 @@ v6 Temp Jeep: Added temp military jeep to the military vechs. A blueprint templa
                  units will be added according to the updates that are taking place
 
                  -Main objective get the game to start, and make farm->town->city upgrade avialb.
-
-
+ ----------------------------    ----------------------------   ------------------------- ------------------------------
+ 
+--v8 Game Start: game is able to be open @ Grand_Command folder. Grand_Comand00 will be the testing grounds before putting
+                them onto Grand_Command for the time being. Game can be start, now will be cleaning up/tidying up the code
+                before implementing the updates as stated on v7 -> farm->town->city, other civ updates then the military,
+                scientific,diplo aspects of it.
 
