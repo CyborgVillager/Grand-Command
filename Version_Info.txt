@@ -59,7 +59,12 @@ v8 Game Start: game is able to be open @ Grand_Command folder. Grand_Comand00 wi
                 before implementing the updates as stated on v7 -> farm->town->city, other civ updates then the military,
                 scientific,diplo aspects of it.
 
---v9 Wiki Implement: will include wiki implement as a tut, to help aid in the modification of the game if you wish to include
+v9 Wiki Implement: will include wiki implement as a tut, to help aid in the modification of the game if you wish to include
                     your addons to it, as well on how to start the game, place to comment, etc.
+
+
+--v10 Consolidate: got the basics of the game to function/place them in their perspective source code, now going to
+                consolidate the code a bit/clean it up and make it cleaner, after that will begin operation as stated
+                @ v9 & v8
 
 
