@@ -27,7 +27,7 @@ except ImportError:
 # Loading the images
 try:
     from gc_loadimg import *
-except:
+except ImportError:
     print('Unable to import gc_loadimg')
 
 
@@ -35,7 +35,7 @@ except:
 # Contains Prestige Count, Multipliers for Prestige, Map Level, & Background Music
 try:
     from gc_global_info import *
-except:
+except ImportError:
     print('Unable to import gc_global_info')
 
 
