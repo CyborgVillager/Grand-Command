@@ -8,8 +8,6 @@ from time import sleep
 import os
 
 
-
-
 # Try import time
 try:
     import time,sys
@@ -50,14 +48,14 @@ except ImportError:
 try:
     import Menu
 except ImportError:
-    print("Cant import Menu @ this time, please check line # Try import menu @ gc_source_mod.py ")
+    print("Cant import Menu @ this time, please check line # Try import menu @ gc_source_module.py ")
     sys.exit()
 
 # Try import MainMenu
 try:
     import MainMenu
 except ImportError:
-    print("Cant import MainMenu @ this time, please check # Try import MainMenu @ gc_source_mod.py")
+    print("Cant import MainMenu @ this time, please check # Try import MainMenu @ gc_source_module.py")
     sys.exit()
 # Initialize the game engine
 pygame.init()

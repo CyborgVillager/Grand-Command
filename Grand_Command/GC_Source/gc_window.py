@@ -1,4 +1,4 @@
-from gc_source_mod import *
+from gc_source_module import *
 
 #Screen Size Data
 DisplayWidth, DisplayHeight = 1250,940

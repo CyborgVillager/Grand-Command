@@ -1,4 +1,4 @@
-from gc_source_mod import *
+from gc_source_module import *
 
 
 # Font type Bebus Neue line 5-14

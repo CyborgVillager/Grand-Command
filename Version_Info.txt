@@ -63,8 +63,13 @@ v9 Wiki Implement: will include wiki implement as a tut, to help aid in the modi
                     your addons to it, as well on how to start the game, place to comment, etc.
 
 
---v10 Consolidate: got the basics of the game to function/place them in their perspective source code, now going to
+v10 Consolidate: got the basics of the game to function/place them in their perspective source code, now going to
                 consolidate the code a bit/clean it up and make it cleaner, after that will begin operation as stated
                 @ v9 & v8
+
+--v11 Consolidate PT 05: modified GC_Source to have a main gc_source that will hold all of the source info from the other
+                            source code. Each will have their comments detailing the main functions of each source code
+                            in a organized format, will continue to consolidate the code for better readability & ease of
+                            modifications.
 
 

@@ -1,4 +1,4 @@
-from gc_source_mod import *
+from gc_source_module import *
 from gc_window import *
 
 try:

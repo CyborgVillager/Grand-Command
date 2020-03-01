@@ -1,14 +1,12 @@
-from gc_source_mod import *
-from gc_tileinfo import *
-from gc_loadimg import *
-from gc_global_info import *
-from gcfonts import *
-from gc_achievements import *
 
-def Achviement(Achviements):
+# general info , random, time, os, sys
+from gc_source import *
+
+
+def Achievement(Achievements):
     global ResourceCount, MaterialProduction, UnUpgradable, UpgradeInfo, MaterialsEarned, Unlocked, Count, PrestigeCount
     count = 0
-    for Quest in Achviements:
+    for Quest in Achievements:
         if count == 0:
             if Quest["wood"] <= MaterialsEarned["Wood"] and Quest["Finished"] == False:
                 Quest["Finished"] = True
@@ -46,7 +44,7 @@ def Achviement(Achviements):
                 Quest["Show Cooldown"] = 10
         count += 1
 
-    return Achviements
+    return Achievments
 
 
 def AchievmentRewards(Num):
@@ -93,7 +91,7 @@ def AchievmentRewards(Num):
 
 def game_loop(height, width, prestige, LoadSave):
     global AscendCount, MinerBought, ResourceCount, MaterialProduction, Cooldown, UnUpgradable, UpgradeInfo, \
-        MaterialsEarned, AnimationStage, Count, Achviements, MusicPaused, Images, Mult, MapLevel, PrestigeCount
+        MaterialsEarned, AnimationStage, Count, Achievments, MusicPaused, Images, Mult, MapLevel, PrestigeCount
 
     # Declaring a ton of variables
     game_run = True
@@ -902,13 +900,13 @@ def game_loop(height, width, prestige, LoadSave):
                  width, Images, AnimationStage, Count)
 
         # This is my try at making multiple files. It looks very ineffecient and probably bad to use.
-        board, ResourceCount, MaterialProduction, Cooldown, UnUpgradable, UpgradeInfo, MaterialsEarned, Count, Achviements, Mult = Menu.menu(
+        board, ResourceCount, MaterialProduction, Cooldown, UnUpgradable, UpgradeInfo, MaterialsEarned, Count, Achievements, Mult = Menu.menu(
             board, CurSelection, pygame, gameDisplay,
             [font_23, font_25, font_30, font_35, font_40, font_50, font_75, font_150], ResourceCount,
             MaterialProduction, Cooldown, UnUpgradable, UpgradeInfo, MaterialsEarned, Count, Achievments, Mult,
             PrestigeCount, AscendCount)
-        # Achvievment Check
-        Achviement(Achievments)
+        # Achievement Check
+        Achievement(Achievements)
 
         # Display the Achievement
         for quest in Achievments:
