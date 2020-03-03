@@ -82,6 +82,7 @@ v13 Multiply Resources: made gathering resources a bit faster just by X global i
  ----------------------------    ----------------------------   ------------------------- ------------------------------
  wor:v14 Pause: will continue to work on this proj, putting on halt for the time being. Will begin operation @ 3/2/20
 
-                --v14.5 Edit: consolidation will take progress on 3/2/20 as well, will fix the img issue, then build up on
+                v14.5 Edit: consolidation will take progress on 3/2/20 as well, will fix the img issue, then build up on
                                 making the code more concise.
 
+--v15 Re-open/Pause: will work on this project @ date 3/10/20, will be making a respo for Web Dev/Full Stack for further exp.
