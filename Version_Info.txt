@@ -87,5 +87,8 @@ v13 Multiply Resources: made gathering resources a bit faster just by X global i
 
 v15 Re-open/Pause: will work on this project @ date 3/10/20, will be making a respo for Web Dev/Full Stack for further exp.
 
---v16 License Added Version_Info: added license , feel free to test/play around, learn something new! (this is just to update
+v16 License Added Version_Info: added license , feel free to test/play around, learn something new! (this is just to update
                                     the version_info.txt, to keep track of the version.)
+
+--v17 Merge: Merge branch 'master' of https://github.com/CyborgVillager/Grand-Command , will be updating the other respos,
+                with the Licenses.
