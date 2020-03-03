@@ -90,5 +90,8 @@ v15 Re-open/Pause: will work on this project @ date 3/10/20, will be making a re
 v16 License Added Version_Info: added license , feel free to test/play around, learn something new! (this is just to update
                                     the version_info.txt, to keep track of the version.)
 
---v17 Merge: Merge branch 'master' of https://github.com/CyborgVillager/Grand-Command , will be updating the other respos,
+v17 Merge: Merge branch 'master' of https://github.com/CyborgVillager/Grand-Command , will be updating the other respos,
                 with the Licenses.
+
+--v18 Re-open/Pause Part 2: project will be worked on date 3/12/20, instead of 3/10/20 as stated from v15, will be primarly
+                            focusing on Full Stack Dev 1st Front End, 2nd Backend/DB's & DevOps.
