@@ -387,29 +387,29 @@ def game_loop(height, width, prestige, LoadSave):
                                 pygame.quit()
                                 sys.exit()
                             if event.type == pygame.MOUSEBUTTONDOWN:
-                                if pos[0] >= 775 and pos[0] <= 975 and pos[1] >= 675 and pos[1] <= 775:
+                                if 775 <= pos[0] <= 975 and pos[1] >= 675 and pos[1] <= 775:
                                     run = False
-                                if pos[0] >= 200 and pos[0] <= 400 and pos[1] >= 25 and pos[1] <= 125 and ResourceCount[
+                                if 200 <= pos[0] <= 400 and pos[1] >= 25 and pos[1] <= 125 and ResourceCount[
                                     "Prestige"] >= cost[Mult["Wood"] - 1]:
                                     ResourceCount["Prestige"] -= cost[Mult["Wood"] - 1]
                                     Mult["Wood"] += 1
-                                if pos[0] >= 600 and pos[0] <= 800 and pos[1] >= 25 and pos[1] <= 125 and ResourceCount[
+                                if 600 <= pos[0] <= 800 and pos[1] >= 25 and pos[1] <= 125 and ResourceCount[
                                     "Prestige"] >= cost[Mult["Stones"] - 1]:
                                     ResourceCount["Prestige"] -= cost[Mult["Stones"] - 1]
                                     Mult["Stones"] += 1
-                                if pos[0] >= 200 and pos[0] <= 400 and pos[1] >= 150 and pos[1] <= 250 and \
+                                if 200 <= pos[0] <= 400 and pos[1] >= 150 and pos[1] <= 250 and \
                                         ResourceCount["Prestige"] >= cost[Mult["Food"] - 1]:
                                     ResourceCount["Prestige"] -= cost[Mult["Food"] - 1]
                                     Mult["Food"] += 1
-                                if pos[0] >= 600 and pos[0] <= 800 and pos[1] >= 150 and pos[1] <= 250 and \
+                                if 600 <= pos[0] <= 800 and pos[1] >= 150 and pos[1] <= 250 and \
                                         ResourceCount["Prestige"] >= cost[Mult["Metal"] - 1]:
                                     ResourceCount["Prestige"] -= cost[Mult["Metal"] - 1]
                                     Mult["Metal"] += 1
-                                if pos[0] >= 200 and pos[0] <= 400 and pos[1] >= 275 and pos[1] <= 375 and \
+                                if 200 <= pos[0] <= 400 and pos[1] >= 275 and pos[1] <= 375 and \
                                         ResourceCount["Prestige"] >= cost[Mult["Electricity"] - 1]:
                                     ResourceCount["Prestige"] -= cost[Mult["Electricity"] - 1]
                                     Mult["Electricity"] += 1
-                                if pos[0] >= 600 and pos[0] <= 800 and pos[1] >= 275 and pos[1] <= 375 and \
+                                if 600 <= pos[0] <= 800 and pos[1] >= 275 and pos[1] <= 375 and \
                                         ResourceCount["Prestige"] >= cost2[MapLevel]:
                                     ResourceCount["Prestige"] -= cost2[MapLevel]
                                     height += 2
@@ -418,7 +418,7 @@ def game_loop(height, width, prestige, LoadSave):
                                     cost2.append(cost2[MapLevel] * 10)
                                     MapLevel += 1
                                     Images = load_images("Images", height, width)
-                                if pos[0] >= 200 and pos[0] <= 400 and pos[1] >= 400 and pos[
+                                if 200 <= pos[0] <= 400 and pos[1] >= 400 and pos[
                                     1] <= 500 and PrestigeCount >= 3 and ResourceCount[
                                     "Prestige"] >= 10000 and MinerBought == False:
                                     MinerBought = True

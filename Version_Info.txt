@@ -93,5 +93,20 @@ v16 License Added Version_Info: added license , feel free to test/play around, l
 v17 Merge: Merge branch 'master' of https://github.com/CyborgVillager/Grand-Command , will be updating the other respos,
                 with the Licenses.
 
---v18 Re-open/Pause Part 2: project will be worked on date 3/12/20, instead of 3/10/20 as stated from v15, will be primarly
+v18 Re-open/Pause Part 2: project will be worked on date 3/12/20, instead of 3/10/20 as stated from v15, will be primarly
                             focusing on Full Stack Dev 1st Front End, 2nd Backend/DB's & DevOps.
+
+--v19 Re-boot: Will begin on improving GC, currently working respo Django-01 respo, to help aid people in getting a good
+		idea about Django and the countless possibilities from using it! Besides that expect the following changes
+			to occur for GC
+
+		* Fix Window sizing
+			- Game window will be fixed
+
+		* Fix City Upgrade
+			- will be fixing the tile once you place a city
+				- afterwords will begin the process of farm-> town00->town01->etc->etc-> city upgrade in this
+					following order
+
+		* Import tests
+			- test the imports to ensure everything is working correctly / if not print an error
